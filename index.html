@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <!-- Time and Score  -->
+    <div>
+        <h1>Time: </h1>
+        <h1 class="time"></h1>
+        <h1 id="timeInd" class="indicator red">-10</h1>
+    </div>
+    <div>
+        <h1>Score: </h1>
+        <h1 class="score"></h1>
+        <h1 id="scoreInd" class="indicator green">+1</h1>
+    </div>
+
+    <!-- Question and buttons -->
+    <div id="game" class="main-wrapper none">
+
+        <h2 class="question"></h2>
+        <button id="A" class="button">A. </button>
+        <button id="B" class="button">B. </button>
+        <button id="C" class="button">C. </button>
+        <button id="D" class="button">D. </button>
+
+    </div>
+
+    <!-- Scoreboard values  -->
+    <div id="scoreBoard" class="main-wrapper">
+        <div class="scoreElement">
+            <h1>Name <span class="hoverRight">Score</span></h1>
+        </div>
+    </div>
+
+    <!-- Add name to scoreboard only after game has been played at least once -->
+    <form id="form" action="" class="none">
+        <input type="text" name="Name" id="addName" placeholder="Enter Name Here">
+        <button id="btnAddName">Enter</button>
+    </form>
+
+    <!-- Button only shows when not playing -->
+    <button id="start">Start Game</button>
+
+    <script src="./Assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/* Pallette */
+:root {
+  --dark: #572121;
+  --medium: #A43737;
+  --light: #DF4D19;
+  --purple: #99235C;
+  --purple-dark: #5e1638;
+  --purple-light: #e68db8;
+
+}
+
+/* Global styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--medium);
+}
+
+/* Main boxes used for scoreboard or game box */
+.main-wrapper {
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  border-radius: 25px;
+  padding: 5%;
+  padding-top: 2%;
+  background-color: var(--light);
+  
+}
+
+/* Answer buttons */
+.button {
+  width: 100%;
+  width: 100%;
+  display: block;
+  background-color: var(--purple-dark);
+  color: var(--purple-light);
+  margin-bottom: 5%;
+  height: 40px;
+  border-style: none;
+  border-radius: 4px;
+
+} 
+
+.button:hover {
+  background-color: var(--purple);
+}
+
+.time .score {
+  display: inline;
+  text-align: center;
+  color: var(--purple-light);
+}
+
+.question {
+  display: block;
+  margin-bottom: 10%;
+  color: var(--purple-light);
+  text-align: left;
+}
+
+/* Indicators for -10 seconds or +1 points */
+.indicator {
+  display: inline;
+  opacity: 0;
+  transition: opacity 1s /* Set opacity to show or remove */
+}
+.show {
+  opacity: 1;
+  transition: opacity 0s
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+
+/* Score Entry */
+.scoreElement{
+  display: block;
+}
+
+/* Score on scoreboard hovers right */
+.hoverRight {
+  position: absolute;
+  right: 7%;
+}
+
+/* Remove item from screen */
+.none {
+  display: none;
+}
+
+/* Form and start button */
+#start, #form {
+  position: relative;
+  background-color: var(--light);
+  color: var(--purple);
+  border-radius: 25px;
+  border: none;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  height: 50px;
+}
+
+#form {
+  width: 25%;
+  height: 70px;
+  padding: 10px;
+}
+
+#form * {
+  display: block;
+  margin:auto;
+  margin-bottom: 5px;
+}
